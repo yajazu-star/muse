@@ -24,6 +24,8 @@
         --accent-soft: #efe6d2;
         --wa: #1faa55;
         --wa-ink: #0d7a3a;
+        --ig: #9a7a45;
+        --ig-ink: #7d6234;
         --danger: #b3402e;
         --shadow: 0 18px 44px rgba(58, 46, 24, 0.10);
         --radius: 18px;
@@ -42,6 +44,8 @@
           --accent-soft: #2c2617;
           --wa: #2fbf71;
           --wa-ink: #4ed38a;
+          --ig: #8a6d35;
+          --ig-ink: #a58347;
           --danger: #e07a63;
           --shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
         }
@@ -435,20 +439,22 @@
         position: fixed; right: 18px; bottom: 18px; z-index: 50;
         width: 56px; height: 56px; border-radius: 50%; background: var(--wa);
         display: grid; place-items: center; box-shadow: 0 10px 26px rgba(13, 90, 45, 0.35);
-        text-decoration: none;
+        text-decoration: none; color: #fff;
+        transition: background .15s ease, transform .15s ease;
       }
       .wa-float:hover { background: var(--wa-ink); }
+      .wa-float:active { transform: scale(0.96); }
       .ig-float {
-        position: fixed; right: 24px; bottom: 86px; z-index: 50;
-        width: 44px; height: 44px; border-radius: 50%;
-        background: var(--surface); border: 1px solid var(--line);
+        position: fixed; right: 18px; bottom: 86px; z-index: 50;
+        width: 56px; height: 56px; border-radius: 50%;
+        background: var(--ig);
         display: grid; place-items: center;
-        color: var(--accent-ink);
-        box-shadow: 0 8px 20px rgba(58, 46, 24, 0.12);
+        color: #fff;
+        box-shadow: 0 10px 26px rgba(125, 98, 52, 0.35);
         text-decoration: none;
-        transition: background .15s ease, border-color .15s ease, transform .15s ease;
+        transition: background .15s ease, transform .15s ease;
       }
-      .ig-float:hover { background: var(--accent-soft); border-color: var(--accent); }
+      .ig-float:hover { background: var(--ig-ink); }
       .ig-float:active { transform: scale(0.96); }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
@@ -1110,7 +1116,7 @@
     </footer>
 
     <a class="ig-float" href="https://www.instagram.com/scalpist_smp/" target="_blank" rel="noopener" aria-label="SCALPIST SMP on Instagram (@scalpist_smp)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
     </a>
 
     <a class="wa-float" href="https://wa.me/6598276610?text=Hello%20SCALPIST%20SMP%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation." target="_blank" rel="noopener" aria-label="Chat with SCALPIST SMP on WhatsApp">
